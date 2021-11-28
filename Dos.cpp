@@ -2,6 +2,7 @@
 #include <color.h>
 #include <unistd.h>
 #include <fstream>
+#include <sstream>
 using namespace std;
 
 struct var{
@@ -15,7 +16,7 @@ struct var{
 \e[36m    + +++  +   ++  +  + ++  +
 \e[36m   git hub: https://github.com/bite-rrjo\e[0m
 )";
-    string key = "327";
+    string key = "326";
 }var;
 
 int hack(){
@@ -29,6 +30,12 @@ int main(int argc, char* argv[]){
     if(argm == "./rrjo" || argm == "rrjo"){
         string res = Internet.get("https://raw.githubusercontent.com/bite-rrjo/DoS-prueba/main/actualizacion");
         if(Internet.errorGetWeb() == true){
+            stringstream fg(res);
+            string line;
+            while(getline(fg, line)){
+                res = line;
+                break;
+            }
             if(res == var.key ){
                 
             }else{
