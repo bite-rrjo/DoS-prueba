@@ -16,11 +16,11 @@ struct var{
 \e[36m    + +++  +   ++  +  + ++  +
 \e[36m   git hub: https://github.com/bite-rrjo\e[0m
 )";
-    string key = "326";
+    string key = "327";
 }var;
 
 int hack(){
-    cout << "xd";
+    cout << "xda";
     return 0;
 }
 
