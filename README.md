@@ -9,6 +9,10 @@
   
   ## para usar:
    curl y linux
+  ## lamada
+  ```bash
+   ./rrjo %opcion% %argumentos%    
+  ```
    
   ## herramientas
   (las opciones deven ser llamadas en un comando, 'rrjo -sms +n +f')
