@@ -9,7 +9,7 @@
   
   ## para usar:
    curl y linux
-  ## lamada
+  ## llamada
   ```bash
    ./rrjo %opcion% %argumentos%    
   ```
