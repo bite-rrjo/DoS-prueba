@@ -67,21 +67,13 @@ class Internet{
 }Internet;
 
 struct var{
-    string Fr3 = R"(
-\e[36m           _____    
-\e[36m          / ___ \
-\e[36m         / /__/ | ____               \e[33mHerramientas
-\e[36m        / __  _/'/    \+ +       [\e[33m-sms '%number%' '%file%'\e[36m]:\e[37m spam sms
-\e[36m       / /  \ \ | |||. |+  +     [\e[33m-BResponse '%url%' '%number%'\e[36m]:\e[37m consegir respuestas de una pagina web 'DoS' level 1
-\e[36m   + +/_/ + /_/+'\____/' + +     [\e[33m-xerxer '%url%'\e[36m]:\e[37m consegir respuestas de una pagina web 'DoS' level 1
-\e[36m    + +++  +   ++  +  + ++  + v1
-\e[36m   git hub: https://github.com/bite-rrjo\e[0m
-)";
+    string Fr3 = "\e[36m           _____    \n\e[36m          / ___ \\\n\e[36m         / /__/ | ____               \e[33mHerramientas\n\e[36m        / __  _/'/    \\+ +       [\e[33m-sms '%numero%' '%archivo%'\e[36m]:\e[37m spam sms\n\e[36m       / /  \\ \\ | |||. |+  +     [\e[33m-BResponse '%url%' '%cantidad%'\e[36m]:\e[37m consegir respuestas de una pagina web 'DoS' level 1\n\e[36m   + +/_/ + /_/+'\\____/' + +     [\e[33m-xerxer '%url%' '%puerto%'\e[36m]:\e[37m consegir respuestas de una pagina web 'DoS' level 1\n\e[36m    + +++  +   ++  +  + ++  + v1\n\e[36m   git hub: https://github.com/bite-rrjo\e[0m\n\n";
     string key = "327";
 }var;
 
 int hack(int cc, char* agm[]){
-    cout << "hola";
+    system("clear");
+    cout << var.Fr3;
     return 0;
 }
 
@@ -123,6 +115,7 @@ int main(int argc, char* argv[]){
         if(remove("rrjo") != 0){
             cout << Red "error\n";
         }
+        cout << Yellow "  configurando\n";
             rename("D320125324242342364", "rrjo");
             hack(argc,argv);
     }else{
@@ -130,4 +123,5 @@ int main(int argc, char* argv[]){
     }
 
     return 0;
+}
 }
