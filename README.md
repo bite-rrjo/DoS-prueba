@@ -31,7 +31,6 @@
             <tr>
                 <td align="center">-BResponse</td>
                 <td align="center">%url%</td>
-                <td align="center">%cantidad%</td>
             </tr>
             <tr>
                 <td align="center">-xerxer</td>
